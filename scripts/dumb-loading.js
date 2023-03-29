@@ -6,6 +6,8 @@ AFRAME.registerComponent("dumb-loading", {
         //brute force caching cubemaps via cacheCubeMaps 
         //manually caching all cube maps in browser to avoid performance spikes
         //also emitting "click" on #icontoggle to cache Icons3D (mini cubemaps)
+
+   
        
 
         const icontoggle = document.getElementById("icontoggle"); //lets us switch between 2d/3d icons via the icon-toggle component

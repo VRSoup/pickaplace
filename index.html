@@ -31,6 +31,7 @@
   <script src="./scripts/display-welcome-text.js"></script>
   <script src="./scripts/icontoggle-extension.js"></script>
   <script src="./scripts/layers.js"></script>
+    <script src="./scripts/test.js"></script>
 
     
  
@@ -500,32 +501,33 @@
       
     <!-- LAYERS --> <!-- the best layer switching method is prob using A-Frames "render-layer component" or directly switching threejs render layer property ) -->  
       
-   <a-entity id="L1" visible="true">
+   <a-entity id="L1" visible="false" test>
        <a-entity cubemap="folder: ./assets/cubemaps/desert-cube/"></a-entity>
         <!-- hide and reveal entities here    -->
    </a-entity>
   
-   <a-entity id="L2" visible="false">
+   <a-entity id="L2" visible="false" test>
        <a-entity cubemap="folder: ./assets/cubemaps/snow-cube/"></a-entity>
        <!-- hide and reveal entities here    -->   
    </a-entity>
 
-   <a-entity id="L3" visible="false">
+   <a-entity id="L3" visible="false" test>
        <a-entity cubemap="folder: ./assets/cubemaps/mountain-cube/"></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
+      
 
-   <a-entity id="L4" visible="false">
+   <a-entity id="L4" visible="false" test>
        <a-entity cubemap="folder: ./assets/cubemaps/louvre-cube/"></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
      
-   <a-entity id="L5" visible="false">
+   <a-entity id="L5" visible="false" test>
        <a-entity cubemap="folder: ./assets/cubemaps/sky-cube/"></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
       
-   <a-entity id="L6" visible="true">
+   <a-entity id="L6" visible="true" test>
           <a-entity cubemap="folder: ./assets/cubemaps/firstcube/; ext: png"></a-entity>
 
           <a-entity id="text"

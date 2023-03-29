@@ -4,11 +4,7 @@
 var cl = "L1";
 
 function setScene() {
-    document.getElementById('L1').setAttribute('visible', 'false')
-    document.getElementById('L2').setAttribute('visible', 'false')
-    document.getElementById('L3').setAttribute('visible', 'false')
-    document.getElementById('L4').setAttribute('visible', 'false')
-    document.getElementById('L5').setAttribute('visible', 'false')
+
 }
 
 function setLayer1() {
