@@ -33,9 +33,10 @@
   <script src="./scripts/layers.js"></script>
     <script src="./scripts/test.js"></script>
 
-    
- 
-  <script src="https://unpkg.com/aframe-cubemap-component@2.1.1/dist/aframe-cubemap-component.min.js"></script>
+
+
+
+    <script src="https://unpkg.com/aframe-cubemap-component@2.1.1/dist/aframe-cubemap-component.min.js"></script>
   <script src="https://unpkg.com/aframe-fps-counter-component/dist/aframe-fps-counter-component.min.js"></script>
   <script src="https://unpkg.com/aframe-render-order-component@1.0.0/dist/aframe-render-order-component.min.js"></script>
     
@@ -501,34 +502,34 @@
       
     <!-- LAYERS --> <!-- the best layer switching method is prob using A-Frames "render-layer component" or directly switching threejs render layer property ) -->  
       
-   <a-entity id="L1" visible="false" test>
-       <a-entity cubemap="folder: ./assets/cubemaps/desert-cube/"></a-entity>
+   <a-entity id="L1" visible="true">
+       <a-entity cubemap="folder: ./assets/cubemaps/desert-cube/; ext: webp"></a-entity>
         <!-- hide and reveal entities here    -->
    </a-entity>
   
-   <a-entity id="L2" visible="false" test>
-       <a-entity cubemap="folder: ./assets/cubemaps/snow-cube/"></a-entity>
+   <a-entity id="L2" visible="false">
+       <a-entity cubemap="folder: ./assets/cubemaps/snow-cube/; ext: webp"></a-entity>
        <!-- hide and reveal entities here    -->   
    </a-entity>
 
-   <a-entity id="L3" visible="false" test>
-       <a-entity cubemap="folder: ./assets/cubemaps/mountain-cube/"></a-entity>
+   <a-entity id="L3" visible="false">
+       <a-entity cubemap="folder: ./assets/cubemaps/mountain-cube/; ext: webp"></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
       
 
-   <a-entity id="L4" visible="false" test>
-       <a-entity cubemap="folder: ./assets/cubemaps/louvre-cube/"></a-entity>
+   <a-entity test id="L4" visible="false">
+       <a-entity cubemap="folder: ./assets/cubemaps/louvre-cube/; ext: webp""></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
      
-   <a-entity id="L5" visible="false" test>
-       <a-entity cubemap="folder: ./assets/cubemaps/sky-cube/"></a-entity>
+   <a-entity id="L5" visible="false">
+       <a-entity test cubemap="folder: ./assets/cubemaps/sky-cube/; ext: webp""></a-entity>
        <!-- hide and reveal entities here    -->
    </a-entity>
       
-   <a-entity id="L6" visible="true" test>
-          <a-entity cubemap="folder: ./assets/cubemaps/firstcube/; ext: png"></a-entity>
+   <a-entity id="L6" visible="false">
+          <a-entity cubemap="folder: ./assets/cubemaps/firstcube/; ext: webp"></a-entity>
 
           <a-entity id="text"
                     text="value:Welcome!; color: #d64161; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/exo2/Exo2-Light.json; align: center"
@@ -562,14 +563,14 @@
                 dynamic-body
                 grabbable
                 scale="0.05 0.05 0.05"
-                cubemap="folder: ./assets/cubemaps/mountain-cube/; edgeLength: 5"
+                cubemap="folder: ./assets/cubemaps/mountain-cube/; edgeLength: 5; ext:webp "
                 position="-0.6 1.6 -0.2"
                 animation ="property: rotation;from:0 15 0; to: 30 0 0; loop: false; dur: 1100; startEvents: animate"
                 render-order="9"
                 class="Icons3D"
                 play-audio="#deep-click-sound-2"
 
-                ><a-entity id="c3" color-sky="layer: 3; delay: false" mixin="Box-Collider"></a-entity> <!--collider-->
+                ><a-entity id="c3" color-sky="layer: 3; delay: false" mixin="Box-Collider"></a-entity> 
                 </a-entity>
         
                 <a-entity
@@ -580,7 +581,7 @@
                 grabbable
                 dynamic-body
                 spawn-position ="position: 0.5  1.15 -0.70; rotation: 55" 
-                cubemap="folder: ./assets/cubemaps/sky-cube/; edgeLength: 5"
+                cubemap="folder: ./assets/cubemaps/sky-cube/; edgeLength: 5; ext:webp"
                 position="0.5  1 -0.70"
                 scale="0.05 0.05 0.05"
                 class="Icons3D"
@@ -588,7 +589,7 @@
                 render-order="9"
                 play-audio="#deep-click-sound-5"
 
-                ><a-entity id="c5" color-sky="layer: 5; delay: false" mixin="Box-Collider"></a-entity><!--collider-->
+                ><a-entity id="c5" color-sky="layer: 5; delay: false" mixin="Box-Collider"></a-entity>
                 </a-entity>
              
                 <a-entity
@@ -600,7 +601,7 @@
                 dynamic-body
                 grabbable
                 spawn-position ="position:-0.5 1.15 -0.70; rotation: -55"
-                cubemap="folder: ./assets/cubemaps/desert-cube/; edgeLength: 5"
+                cubemap="folder: ./assets/cubemaps/desert-cube/; edgeLength: 5; ext:webp"
                 position="-0.5 1 -0.70"
                 scale="0.05 0.05 0.05"
                 class="Icons3D"
@@ -609,7 +610,7 @@
                 render-order="9"
                 play-audio="#deep-click-sound-1"
 
-                ><a-entity id="c1" color-sky="layer: 1; delay: false" mixin="Box-Collider"></a-entity> <!--collider-->
+                ><a-entity id="c1" color-sky="layer: 1; delay: false" mixin="Box-Collider"></a-entity> 
                 </a-entity>
     
                 <a-entity
@@ -623,7 +624,7 @@
                 dynamic-body
                 grabbable
                 spawn-position = "position: 0 0.9 -1; rotation: 0 " 
-                cubemap="folder: ./assets/cubemaps/snow-cube/; edgeLength: 5"
+                cubemap="folder: ./assets/cubemaps/snow-cube/; edgeLength: 5; ext:webp"
                 position="0 1 -1"
                 scale="0.05 0.05 0.05"
                 animation = "property: rotation; from: 0 0 0; to: 0 20 0; loop: false; dur: 600; startEvents: animate"
@@ -632,7 +633,7 @@
                 render-order="9"
                 play-audio="#deep-click-sound-3"
 
-                ><a-entity id="c2" color-sky="layer: 2; delay: false" mixin="Box-Collider"></a-entity> <!--collider-->
+                ><a-entity id="c2" color-sky="layer: 2; delay: false" mixin="Box-Collider"></a-entity> 
                 </a-entity>
         
                 <a-entity
@@ -645,7 +646,7 @@
                 grabbable 
                 dynamic-body
                 spawn-position ="position: 0.6 1.6 -0.2; rotation: -15"
-                cubemap="folder: ./assets/cubemaps/louvre-cube/; edgeLength: 5"
+                cubemap="folder: ./assets/cubemaps/louvre-cube/; edgeLength: 5; ext:webp"
                 position="0.6 1.6 -0.2"
                 scale="0.05 0.05 0.05"
                 animation ="property: rotation; from:0 -15 0; to: 30 0 0; loop: false; dur: 1100; startEvents: animate"
@@ -653,7 +654,7 @@
                 play-audio="#deep-click-sound-4"
 
                 ><a-entity id="c4" color-sky="layer: 4; delay: false" mixin="Box-Collider">
-                </a-entity> <!--collider-->
+                </a-entity> 
                 </a-entity>
       
    
@@ -665,7 +666,7 @@
      <a-sky 
       id="transitionSphere"
       radius="10"
-      material="opacity: 1; transparent: true" color="#f4f4f4"
+      material="opacity: 0; transparent: true" color="#f4f4f4"
       position="0 1.690 0" rotation="0 90 -2"
       animation__fadein="property: components.material.material.opacity; type: isRawProperty; from: 0; to: 1; dur: 350; startEvents: transition"
       animation__fadeback="property: components.material.material.opacity; type: isRawProperty; from: 1; to: 0;delay:100; dur: 350; startEvents: animationcomplete__fadein"
