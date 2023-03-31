@@ -10,7 +10,9 @@ AFRAME.registerComponent("dumb-loading", {
    
        
 
-        const icontoggle = document.getElementById("icontoggle"); //lets us switch between 2d/3d icons via the icon-toggle component
+     //   const icontoggle = document.getElementById("icontoggle"); //lets us switch between 2d/3d icons via the icon-toggle component
+      
+      
         const funcs = [setScene, setLayer1, setLayer2, setLayer3, setLayer4, setLayer5, setLayer6]; //functions are defined in ./scripts/loading.js, 
 
         let scene = this.el;
@@ -21,11 +23,11 @@ AFRAME.registerComponent("dumb-loading", {
         }
 
 
-        async function cacheIcons3D () {
+    /*    async function cacheIcons3D () {
             await sleep(500);
             icontoggle.emit("click");
         }
-
+*/
 
         scene.addEventListener('loaded', function () {
             async function cacheCubeMaps () {
@@ -41,7 +43,7 @@ AFRAME.registerComponent("dumb-loading", {
             }
 
             cacheCubeMaps();             /* manually cacheing cubemaps then starts scene */
-            cacheIcons3D();              /* manually caching emitting click to icon-toggle */
+          //  cacheIcons3D();              /* manually caching emitting click to icon-toggle */
 
         })
     },
